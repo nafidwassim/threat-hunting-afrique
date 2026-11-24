@@ -1,0 +1,20 @@
+# Zones CTI (MISP, DFIR-IRIS) et IA locale (Ollama). Zone SOC : voir infra/soc/README.md (wazuh-docker, single-node).
+# STATUT : fichier rédigé hors laboratoire, NON déployé ni testé (pas de Docker/réseau dans l'environnement de rédaction).
+# A valider au laboratoire : versions d'images à épingler (variables .env), ports, ressources (>= 16 Go RAM conseillés).
+name: threat-hunting-afrique
+services:
+  ollama:
+    image: ollama/ollama:${OLLAMA_TAG:-latest}
+    ports: ["127.0.0.1:11434:11434"]
+    volumes: ["ollama:/root/.ollama"]
+    restart: unless-stopped
+  iris-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: iris, POSTGRES_PASSWORD: "${IRIS_DB_PASSWORD:?à définir dans .env}", POSTGRES_DB: iris_db}
+    volumes: ["iris-db:/var/lib/postgresql/data"]
+  # DFIR-IRIS : suivre la procédure officielle (dépôt dfir-iris/iris-web, docker-compose.yml + .env.model) ;
+  # ce service est un emplacement à remplacer par l'include du compose officiel après vérification de la version.
+  misp-note:
+    image: busybox:1.36
+    command: ["sh", "-c", "echo 'MISP : utiliser le dépôt officiel MISP/misp-docker (cp template.env .env ; docker compose up -d)'; sleep infinity"]
+volumes: {ollama: {}, iris-db: {}}

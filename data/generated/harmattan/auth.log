@@ -1,0 +1,139 @@
+Nov  2 02:00:01 ht-oss01 CRON[44402]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  2 07:08:48 ht-web01 sshd[16760]: Accepted password for ibrahim.traore from 10.30.60.105 port 40010 ssh2
+Nov  2 07:16:48 ht-web01 sudo: ibrahim.traore : TTY=pts/0 ; PWD=/home/ibrahim.traore ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  2 08:37:44 ht-vpn01 sshd[29410]: Accepted publickey for moussa.idrissi from 10.30.211.246 port 53444 ssh2
+Nov  2 09:53:42 ht-web01 sudo: aminata.kamau : TTY=pts/0 ; PWD=/home/aminata.kamau ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  2 09:53:53 ht-web01 sshd[27584]: Accepted publickey for yao.diallo from 10.30.110.245 port 39676 ssh2
+Nov  2 10:25:53 ht-web01 sshd[36889]: Accepted password for aminata.odhiambo from 10.30.126.189 port 47508 ssh2
+Nov  2 10:29:42 ht-web01 sshd[2293]: Accepted publickey for grace.diallo from 10.30.139.237 port 52624 ssh2
+Nov  2 10:49:37 ht-bss01 sshd[10076]: Accepted publickey for brian.alaoui from 10.30.149.102 port 48483 ssh2
+Nov  2 10:50:42 ht-web01 sudo: grace.diallo : TTY=pts/0 ; PWD=/home/grace.diallo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  2 10:58:34 ht-bss01 sshd[21140]: Accepted publickey for awa.diallo from 10.30.181.219 port 32929 ssh2
+Nov  2 12:55:31 ht-vpn01 sshd[28159]: Accepted password for adama.alaoui from 10.30.200.43 port 55770 ssh2
+Nov  2 13:33:38 ht-agent01 sshd[25856]: Accepted publickey for sara.alaoui from 10.30.133.201 port 33715 ssh2
+Nov  2 14:00:01 ht-oss01 CRON[12734]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  2 14:52:10 ht-bss01 sudo: amine.kamau : TTY=pts/0 ; PWD=/home/amine.kamau ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  2 14:58:35 ht-bss01 sudo: sara.kouassi : TTY=pts/0 ; PWD=/home/sara.kouassi ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  2 15:28:16 ht-web01 sshd[14196]: Accepted publickey for mercy.kamau from 10.30.246.188 port 46852 ssh2
+Nov  2 16:34:54 ht-oss01 sshd[26127]: Accepted publickey for moussa.bennani from 10.30.201.221 port 50835 ssh2
+Nov  3 02:00:01 ht-oss01 CRON[21722]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  3 07:45:42 ht-oss01 sshd[15258]: Accepted publickey for mariam.alaoui from 10.30.244.218 port 59532 ssh2
+Nov  3 07:57:42 ht-oss01 sudo: mariam.alaoui : TTY=pts/0 ; PWD=/home/mariam.alaoui ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  3 08:15:23 ht-oss01 sshd[32938]: Accepted password for brian.alaoui from 10.30.149.102 port 48938 ssh2
+Nov  3 08:17:40 ht-oss01 sudo: aminata.kamau : TTY=pts/0 ; PWD=/home/aminata.kamau ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  3 09:01:07 ht-agent01 sshd[6734]: Accepted publickey for peter.odhiambo from 10.30.208.35 port 32996 ssh2
+Nov  3 09:54:45 ht-web01 sshd[2435]: Accepted password for aminata.odhiambo from 10.30.126.189 port 33376 ssh2
+Nov  3 10:13:07 ht-agent01 sshd[35719]: Accepted publickey for sara.kouassi from 10.30.144.54 port 47475 ssh2
+Nov  3 10:26:12 ht-web01 sshd[53721]: Accepted publickey for karim.tazi from 10.30.132.90 port 34377 ssh2
+Nov  3 10:50:37 ht-oss01 sshd[27475]: Accepted publickey for awa.diallo from 10.30.181.219 port 41187 ssh2
+Nov  3 10:57:40 ht-agent01 sshd[28825]: Accepted publickey for awa.mwangi from 10.30.158.153 port 33760 ssh2
+Nov  3 11:44:31 ht-agent01 sshd[8598]: Accepted password for yao.kamau from 10.30.15.125 port 49488 ssh2
+Nov  3 11:48:29 ht-oss01 sshd[33011]: Accepted password for amine.alaoui from 10.30.8.122 port 56946 ssh2
+Nov  3 13:10:32 ht-oss01 sshd[50904]: Accepted publickey for fatima.otieno from 10.30.198.53 port 59677 ssh2
+Nov  3 13:12:34 ht-vpn01 sshd[10079]: Accepted publickey for sara.alaoui from 10.30.133.201 port 57882 ssh2
+Nov  3 13:16:51 ht-agent01 sshd[35751]: Accepted publickey for mehdi.diallo from 10.30.69.170 port 45337 ssh2
+Nov  3 13:28:34 ht-vpn01 sudo: sara.alaoui : TTY=pts/0 ; PWD=/home/sara.alaoui ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  3 14:00:01 ht-oss01 CRON[26301]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  3 14:26:10 ht-bss01 sshd[36163]: Accepted publickey for mercy.wanjiru from 10.30.2.100 port 31691 ssh2
+Nov  3 15:48:52 ht-vpn01 sshd[29690]: Accepted password for mariam.kone from 10.30.118.234 port 39948 ssh2
+Nov  3 15:54:44 ht-oss01 sshd[28866]: Accepted publickey for mercy.kamau from 10.30.246.188 port 48357 ssh2
+Nov  3 16:24:14 ht-oss01 sshd[24955]: Accepted publickey for yao.diallo from 10.30.110.245 port 37178 ssh2
+Nov  4 02:00:01 ht-oss01 CRON[13014]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  4 09:36:19 ht-web01 sshd[48811]: Accepted publickey for awa.diallo from 10.30.181.219 port 46425 ssh2
+Nov  4 10:42:39 ht-web01 sshd[8335]: Accepted password for karim.tazi from 10.30.132.90 port 46880 ssh2
+Nov  4 10:50:25 ht-bss01 sshd[12751]: Accepted publickey for awa.mwangi from 10.30.158.153 port 40494 ssh2
+Nov  4 11:03:09 ht-web01 sshd[36411]: Failed password for aminata.diallo from 10.30.134.217 port 40085 ssh2
+Nov  4 11:03:29 ht-web01 sshd[36411]: Accepted publickey for aminata.diallo from 10.30.134.217 port 47006 ssh2
+Nov  4 11:08:25 ht-bss01 sudo: awa.mwangi : TTY=pts/0 ; PWD=/home/awa.mwangi ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 11:22:16 ht-web01 sudo: grace.idrissi : TTY=pts/0 ; PWD=/home/grace.idrissi ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 11:24:06 ht-web01 sshd[6709]: Accepted password for ibrahim.traore from 10.30.60.105 port 39213 ssh2
+Nov  4 11:52:28 ht-agent01 sshd[26674]: Accepted publickey for peter.odhiambo from 10.30.208.35 port 31714 ssh2
+Nov  4 12:33:11 ht-oss01 sshd[1534]: Accepted publickey for fatima.njoroge from 10.30.59.5 port 53602 ssh2
+Nov  4 13:11:36 ht-agent01 sudo: grace.diallo : TTY=pts/0 ; PWD=/home/grace.diallo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 13:55:02 ht-web01 sudo: adama.alaoui : TTY=pts/0 ; PWD=/home/adama.alaoui ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 14:00:01 ht-oss01 CRON[48364]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  4 14:34:57 ht-bss01 sudo: youssef.odhiambo : TTY=pts/0 ; PWD=/home/youssef.odhiambo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 15:01:37 ht-web01 sudo: nadia.kouassi : TTY=pts/0 ; PWD=/home/nadia.kouassi ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 17:21:56 ht-bss01 sudo: daniel.odhiambo : TTY=pts/0 ; PWD=/home/daniel.odhiambo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  4 19:13:00 ht-bss01 sshd[2241]: Failed password for invalid user adama.alaoui from 198.51.100.23 port 56287 ssh2
+Nov  4 19:13:12 ht-bss01 sshd[36215]: Failed password for invalid user aminata.diallo from 198.51.100.23 port 44403 ssh2
+Nov  4 19:13:24 ht-bss01 sshd[48510]: Failed password for invalid user aminata.kamau from 198.51.100.23 port 54069 ssh2
+Nov  4 19:13:36 ht-bss01 sshd[28752]: Failed password for invalid user aminata.odhiambo from 198.51.100.23 port 50609 ssh2
+Nov  4 19:13:48 ht-bss01 sshd[10605]: Failed password for invalid user amine.alaoui from 198.51.100.23 port 41934 ssh2
+Nov  4 19:14:00 ht-bss01 sshd[27274]: Failed password for invalid user amine.kamau from 198.51.100.23 port 58001 ssh2
+Nov  4 19:14:12 ht-bss01 sshd[15779]: Failed password for invalid user awa.diallo from 198.51.100.23 port 54828 ssh2
+Nov  4 19:14:24 ht-bss01 sshd[45199]: Failed password for invalid user awa.mwangi from 198.51.100.23 port 48454 ssh2
+Nov  4 19:14:36 ht-bss01 sshd[33463]: Failed password for invalid user brian.alaoui from 198.51.100.23 port 57359 ssh2
+Nov  4 19:14:48 ht-bss01 sshd[48008]: Failed password for invalid user daniel.odhiambo from 198.51.100.23 port 59637 ssh2
+Nov  4 19:15:00 ht-bss01 sshd[37596]: Failed password for invalid user faith.traore from 198.51.100.23 port 50802 ssh2
+Nov  4 19:15:12 ht-bss01 sshd[19305]: Failed password for invalid user fatima.njoroge from 198.51.100.23 port 33997 ssh2
+Nov  4 19:15:24 ht-bss01 sshd[33905]: Failed password for invalid user fatima.otieno from 198.51.100.23 port 54522 ssh2
+Nov  4 19:15:36 ht-bss01 sshd[19892]: Failed password for invalid user grace.diallo from 198.51.100.23 port 30772 ssh2
+Nov  4 19:15:48 ht-bss01 sshd[20227]: Failed password for invalid user grace.idrissi from 198.51.100.23 port 50737 ssh2
+Nov  4 19:16:00 ht-bss01 sshd[35457]: Failed password for invalid user ibrahim.traore from 198.51.100.23 port 54964 ssh2
+Nov  4 19:16:12 ht-bss01 sshd[5056]: Failed password for invalid user karim.tazi from 198.51.100.23 port 39376 ssh2
+Nov  4 19:16:24 ht-bss01 sshd[4600]: Failed password for invalid user mariam.alaoui from 198.51.100.23 port 33023 ssh2
+Nov  4 19:16:36 ht-bss01 sshd[25271]: Failed password for invalid user mariam.idrissi from 198.51.100.23 port 41665 ssh2
+Nov  4 19:16:48 ht-bss01 sshd[8511]: Failed password for invalid user mariam.kone from 198.51.100.23 port 51900 ssh2
+Nov  4 19:17:00 ht-bss01 sshd[34034]: Failed password for invalid user mehdi.diallo from 198.51.100.23 port 44752 ssh2
+Nov  4 19:17:12 ht-bss01 sshd[18998]: Failed password for invalid user mehdi.idrissi from 198.51.100.23 port 53269 ssh2
+Nov  4 19:17:24 ht-bss01 sshd[3253]: Failed password for invalid user mercy.kamau from 198.51.100.23 port 31823 ssh2
+Nov  4 19:17:36 ht-bss01 sshd[37180]: Failed password for invalid user mercy.wanjiru from 198.51.100.23 port 38948 ssh2
+Nov  4 19:17:48 ht-bss01 sshd[23194]: Failed password for invalid user moussa.bennani from 198.51.100.23 port 41425 ssh2
+Nov  4 19:18:00 ht-bss01 sshd[17066]: Failed password for invalid user moussa.idrissi from 198.51.100.23 port 55162 ssh2
+Nov  4 19:18:12 ht-bss01 sshd[19389]: Failed password for invalid user moussa.njoroge from 198.51.100.23 port 55710 ssh2
+Nov  4 19:18:24 ht-bss01 sshd[33123]: Failed password for invalid user nadia.kouassi from 198.51.100.23 port 38661 ssh2
+Nov  4 19:18:36 ht-bss01 sshd[50841]: Failed password for invalid user peter.odhiambo from 198.51.100.23 port 54718 ssh2
+Nov  4 19:18:48 ht-bss01 sshd[5430]: Failed password for invalid user sara.alaoui from 198.51.100.23 port 37515 ssh2
+Nov  4 19:19:00 ht-bss01 sshd[27756]: Failed password for invalid user sara.kouassi from 198.51.100.23 port 42472 ssh2
+Nov  4 19:19:12 ht-bss01 sshd[31796]: Failed password for invalid user yao.diallo from 198.51.100.23 port 35313 ssh2
+Nov  4 19:19:24 ht-bss01 sshd[55238]: Failed password for invalid user yao.kamau from 198.51.100.23 port 50118 ssh2
+Nov  4 19:19:36 ht-bss01 sshd[28060]: Failed password for invalid user yao.traore from 198.51.100.23 port 45016 ssh2
+Nov  4 19:19:48 ht-bss01 sshd[29472]: Failed password for invalid user youssef.odhiambo from 198.51.100.23 port 37262 ssh2
+Nov  4 19:20:00 ht-bss01 sshd[30922]: Failed password for invalid user adama.alaoui from 198.51.100.23 port 55454 ssh2
+Nov  4 19:20:12 ht-bss01 sshd[34643]: Failed password for invalid user aminata.diallo from 198.51.100.23 port 50732 ssh2
+Nov  4 19:20:24 ht-bss01 sshd[6366]: Failed password for invalid user aminata.kamau from 198.51.100.23 port 54098 ssh2
+Nov  4 19:20:36 ht-bss01 sshd[34272]: Failed password for invalid user aminata.odhiambo from 198.51.100.23 port 42928 ssh2
+Nov  4 19:20:48 ht-bss01 sshd[25897]: Failed password for invalid user amine.alaoui from 198.51.100.23 port 36182 ssh2
+Nov  4 19:21:00 ht-bss01 sshd[14164]: Failed password for invalid user amine.kamau from 198.51.100.23 port 59075 ssh2
+Nov  4 19:21:12 ht-bss01 sshd[41635]: Failed password for invalid user awa.diallo from 198.51.100.23 port 34364 ssh2
+Nov  4 19:21:24 ht-bss01 sshd[3460]: Failed password for invalid user awa.mwangi from 198.51.100.23 port 50526 ssh2
+Nov  4 19:21:36 ht-bss01 sshd[10373]: Failed password for invalid user brian.alaoui from 198.51.100.23 port 44968 ssh2
+Nov  4 19:21:48 ht-bss01 sshd[24018]: Failed password for invalid user daniel.odhiambo from 198.51.100.23 port 41550 ssh2
+Nov  4 19:22:30 ht-bss01 sshd[56630]: Accepted password for awa.mwangi from 198.51.100.23 port 56238 ssh2
+Nov  5 02:00:01 ht-oss01 CRON[19280]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  5 08:16:31 ht-bss01 sshd[56797]: Accepted publickey for mehdi.diallo from 10.30.69.170 port 51094 ssh2
+Nov  5 10:12:13 ht-vpn01 sshd[50102]: Accepted password for awa.mwangi from 10.30.158.153 port 41082 ssh2
+Nov  5 11:02:36 ht-web01 sshd[22678]: Accepted password for fatima.njoroge from 10.30.59.5 port 58770 ssh2
+Nov  5 11:07:45 ht-web01 sshd[13775]: Accepted password for grace.idrissi from 10.30.221.142 port 55532 ssh2
+Nov  5 11:26:51 ht-web01 sudo: grace.diallo : TTY=pts/0 ; PWD=/home/grace.diallo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  5 11:29:36 ht-web01 sudo: fatima.njoroge : TTY=pts/0 ; PWD=/home/fatima.njoroge ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  5 12:41:01 ht-bss01 sshd[36691]: Accepted password for aminata.odhiambo from 10.30.126.189 port 34515 ssh2
+Nov  5 12:42:36 ht-agent01 sshd[24935]: Accepted publickey for mariam.kone from 10.30.118.234 port 39973 ssh2
+Nov  5 13:10:01 ht-bss01 sudo: aminata.odhiambo : TTY=pts/0 ; PWD=/home/aminata.odhiambo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  5 14:00:01 ht-oss01 CRON[7018]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  5 16:12:03 ht-oss01 sshd[19880]: Accepted password for fatima.otieno from 10.30.198.53 port 40346 ssh2
+Nov  5 16:17:03 ht-oss01 sudo: fatima.otieno : TTY=pts/0 ; PWD=/home/fatima.otieno ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  6 02:00:01 ht-oss01 CRON[30637]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  6 07:38:12 ht-oss01 sshd[57035]: Accepted publickey for awa.mwangi from 10.30.158.153 port 54272 ssh2
+Nov  6 08:48:37 ht-vpn01 sshd[29819]: Accepted password for mercy.kamau from 10.30.246.188 port 45127 ssh2
+Nov  6 10:28:47 ht-bss01 sshd[28082]: Accepted publickey for youssef.odhiambo from 10.30.146.143 port 55481 ssh2
+Nov  6 10:51:54 ht-vpn01 sudo: yao.kamau : TTY=pts/0 ; PWD=/home/yao.kamau ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  6 11:05:32 ht-bss01 sshd[27259]: Accepted publickey for yao.diallo from 10.30.110.245 port 46891 ssh2
+Nov  6 11:11:38 ht-oss01 sshd[23295]: Accepted publickey for daniel.odhiambo from 10.30.166.45 port 47960 ssh2
+Nov  6 11:36:14 ht-bss01 sudo: mercy.wanjiru : TTY=pts/0 ; PWD=/home/mercy.wanjiru ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  6 12:17:22 ht-web01 sshd[6266]: Accepted password for mehdi.idrissi from 10.30.141.157 port 30142 ssh2
+Nov  6 12:29:08 ht-oss01 sshd[55819]: Accepted publickey for peter.odhiambo from 10.30.208.35 port 40353 ssh2
+Nov  6 12:45:52 ht-vpn01 sshd[44105]: Accepted publickey for karim.tazi from 10.30.132.90 port 32164 ssh2
+Nov  6 12:50:07 ht-vpn01 sshd[50867]: Accepted publickey for ibrahim.traore from 10.30.60.105 port 49306 ssh2
+Nov  6 13:38:19 ht-bss01 sshd[2642]: Accepted password for grace.diallo from 10.30.139.237 port 39353 ssh2
+Nov  6 13:52:02 ht-oss01 sshd[22182]: Accepted publickey for aminata.diallo from 10.30.134.217 port 58980 ssh2
+Nov  6 13:57:02 ht-oss01 sudo: aminata.diallo : TTY=pts/0 ; PWD=/home/aminata.diallo ; USER=root ; COMMAND=/usr/bin/systemctl status app
+Nov  6 14:00:01 ht-oss01 CRON[3719]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  6 14:52:56 ht-web01 sshd[53831]: Accepted password for awa.diallo from 10.30.181.219 port 56145 ssh2
+Nov  7 02:00:01 ht-oss01 CRON[35211]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  7 14:00:01 ht-oss01 CRON[16757]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  7 16:21:12 ht-web01 sshd[31757]: Accepted publickey for youssef.odhiambo from 10.30.146.143 port 48293 ssh2
+Nov  8 02:00:01 ht-oss01 CRON[52893]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  8 14:00:01 ht-oss01 CRON[40417]: (root) CMD (/usr/local/bin/backup.sh)
+Nov  8 16:20:03 ht-agent01 sudo: grace.idrissi : TTY=pts/0 ; PWD=/home/grace.idrissi ; USER=root ; COMMAND=/usr/bin/systemctl status app

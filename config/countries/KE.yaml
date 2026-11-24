@@ -1,0 +1,13 @@
+country: KE
+names: [Kenya, Kenyan, Nairobi, Mombasa]
+cctld: [".ke"]
+language: [en, sw]
+authorities: ["Communications Authority of Kenya", "National KE-CIRT/CC", ODPC]
+legal_framework:
+  - "Computer Misuse and Cybercrimes Act 2018 (projet d'amendement 2024 visant SIM swap et scam calls)"
+  - "Data Protection Act 2019 (ODPC)"
+threat_context:
+  - text: "SIM swap +327 % en 2025 (123 000+ SIM frauduleuses, environ 3,8 M USD vidés) ; 46 786 attaques DDoS au premier semestre 2025, surtout contre les télécoms."
+    source: "INTERPOL, African Cyberthreat Assessment Report 2026, p. 13, 19, 23"
+    tendency: "fraude mobile money et DDoS ; rançongiciels visant des infrastructures"
+keywords: [Kenya, ".ke", Nairobi, KES, "East Africa", "Afrique de l'Est", "mobile money", "M-Pesa"]

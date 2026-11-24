@@ -1,0 +1,34 @@
+# Paramètres du score de priorisation (voir rapport, section Scoring).
+# score = 100 * (w_pertinence * P + w_fiabilite * F + w_criticite * C)
+# Les seuils sont calibrés sur le jeu annoté (python -m thab.calibrate) ; à recalibrer avec des
+# données réelles avant le mi-parcours.
+weights:
+  pertinence: 0.55
+  fiabilite: 0.15
+  criticite: 0.30
+thresholds:
+  hunt: 50        # >= 50 -> chasse prioritaire   (calibré sur le jeu annoté synthétique : provisoire)
+  watch: 38       # 38..49 -> surveillance ; < 38 -> archivage
+reliability_gate: 0.35   # si F < 0.35, l'action est plafonnée à "surveillance"
+admiralty:
+  reliability: {A: 1.0, B: 0.8, C: 0.6, D: 0.4, E: 0.2, F: 0.3}
+  credibility: {"1": 1.0, "2": 0.8, "3": 0.6, "4": 0.4, "5": 0.2, "6": 0.3}
+criticality_by_category:
+  ransomware: 0.95
+  vuln_exploit: 0.90
+  data_leak_sale: 0.85
+  mobile_money_fraud: 0.85
+  phishing_bec: 0.70
+  hacktivism_ddos: 0.55
+  hors_sujet: 0.05
+recency_half_life_days: 45
+entity_weights:
+  domain_or_brand: 1.0
+  technology: 0.6
+  sector_and_country: 0.5
+  sector: 0.3
+  country: 0.25
+  region: 0.1
+similarity_scale: 0.30     # cosinus TF-IDF au-delà duquel la similarité est considérée maximale
+pertinence_mix: {entity: 0.6, similarity: 0.4}
+similarity_backend: tfidf   # tfidf | sentence-transformers (laboratoire)

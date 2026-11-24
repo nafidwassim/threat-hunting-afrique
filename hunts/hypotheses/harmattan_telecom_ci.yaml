@@ -1,0 +1,86 @@
+profile: harmattan_telecom_ci
+status: candidate - à valider par un analyste
+hypotheses:
+- id: HT-01
+  title: Abus des outils d'activation SIM par comptes d'agents (SIM swap interne)
+  techniques:
+  - T1656
+  - T1078
+  data_sources:
+  - 'wazuh: journaux applicatifs du portail agents'
+  - volumétrie par agent / par heure
+  statement: Des comptes d'agents de Harmattan Télécom / HarmattanPay / Harmattan
+    Money réalisent des échanges de SIM hors profil habituel.
+  origin: module sectoriel
+  status: candidate
+- id: HT-02
+  title: Exploitation de portails ou API exposés (OSS/BSS, revendeurs)
+  techniques:
+  - T1190
+  - T1505.003
+  data_sources:
+  - 'wazuh: journaux web / WAF'
+  - 'InternetDB: ports et CVE exposés'
+  statement: Des services exposés de harmattan-telecom.example / harmattanpay.example
+    sont scannés puis exploités.
+  origin: module sectoriel
+  status: candidate
+- id: HT-03
+  title: Exfiltration de la base d'abonnés avant extorsion
+  techniques:
+  - T1530
+  - T1567
+  - T1048
+  data_sources:
+  - 'wazuh: flux sortants volumineux'
+  - alertes DLP
+  statement: Des volumes de données anormaux sortent des serveurs hébergeant les abonnés.
+  origin: module sectoriel
+  status: candidate
+- id: HT-04
+  title: DDoS contre l'infrastructure d'accès ou de signalisation
+  techniques:
+  - T1498
+  - T1499
+  data_sources:
+  - 'wazuh: journaux pare-feu / équilibreurs'
+  statement: Pics de requêtes anormaux visant les portails clients de Harmattan Télécom
+    / HarmattanPay / Harmattan Money.
+  origin: module sectoriel
+  status: candidate
+- id: HT-05
+  title: Phishing SMS / ingénierie sociale pour captation d'OTP mobile money
+  techniques:
+  - T1598
+  - T1566
+  data_sources:
+  - renseignement externe (OSINT)
+  - signalements clients
+  statement: Des campagnes SMS imitant Harmattan Télécom / HarmattanPay / Harmattan
+    Money circulent et captent les codes OTP.
+  origin: module sectoriel
+  status: candidate
+- id: HX-paloalto
+  title: Exploitation ou abus d'accès distant sur Palo Alto
+  techniques:
+  - T1190
+  - T1133
+  data_sources:
+  - 'wazuh: journaux de l''équipement'
+  - 'InternetDB: ports/CVE exposés'
+  statement: Palo Alto (Passerelle VPN exposée) chez Harmattan Télécom est ciblé via
+    vulnérabilité ou identifiants valides.
+  origin: technologie du profil
+  status: candidate
+- id: HX-wordpres
+  title: Exploitation ou abus d'accès distant sur WordPress
+  techniques:
+  - T1133
+  - T1021.001
+  data_sources:
+  - 'wazuh: journaux de l''équipement'
+  - 'InternetDB: ports/CVE exposés'
+  statement: WordPress (Accès distant) chez Harmattan Télécom est ciblé via vulnérabilité
+    ou identifiants valides.
+  origin: technologie du profil
+  status: candidate

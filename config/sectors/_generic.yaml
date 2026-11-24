@@ -1,0 +1,26 @@
+# Repli utilisé quand le secteur du profil n'a pas de module dédié.
+# Le modèle fonctionne alors avec : socle commun + module pays + correspondance technologies -> TTP.
+# C'est ce repli qui permet le test de généricité "sans modification de code".
+sector: _generic
+aliases: []
+ttps: []
+actors:
+  - {name: "Affiliés rançongiciel opportunistes", type: rançongiciel, source: "INTERPOL, 2026"}
+  - {name: "Hacktivistes régionaux", type: hacktivisme, source: "CybelAngel, 2025"}
+keywords: []
+hypotheses:
+  - id: HG-01
+    title: "Comptes valides utilisés depuis un nouveau pays ou hors horaires"
+    techniques: [T1078]
+    data_sources: ["wazuh: authentifications VPN / SSH / Windows"]
+    statement: "Des comptes de {brands} se connectent depuis des pays ou horaires inhabituels."
+  - id: HG-02
+    title: "Exploitation d'un service exposé lié aux technologies du profil"
+    techniques: [T1190]
+    data_sources: ["wazuh: journaux web", "InternetDB"]
+    statement: "Un service exposé de {domains} est ciblé par une vulnérabilité connue."
+  - id: HG-03
+    title: "Campagne de phishing ou domaine typosquatté ciblant la marque"
+    techniques: [T1583.001, T1566]
+    data_sources: ["dnstwist / crt.sh"]
+    statement: "Un domaine proche de {domains} est enregistré."

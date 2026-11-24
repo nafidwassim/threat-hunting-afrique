@@ -1,0 +1,45 @@
+[
+  {
+    "id": "INTEL-001",
+    "title": "Fuite CNSS (Maroc) revendiquée sur Telegram puis republiée sur des forums",
+    "text": "Un utilisateur Telegram (alias Jabaroot) a revendiqué le 8 avril 2025 la fuite de données de la Caisse nationale de sécurité sociale du Maroc : plus de 50 000 fichiers PDF et plus d'un million de lignes dans deux fichiers CSV, avec des données financières et personnelles d'entreprises et de salariés marocains, dont de grandes banques. Les données ont été publiées sur BreachForums puis DarkForums ; plus de 5 To de données ont été publiées sur des plateformes web et dark web entre avril et juin 2025. Les revendications visant des actifs marocains sont passées de 63 à 88 en environ deux mois et demi (finance, gouvernement, éducation).",
+    "source": "CybelAngel, Escalating Cyber Hostilities in North Africa [A CNSS Breach Update]",
+    "url": "https://cybelangel.com/blog/a-cnss-breach-update/",
+    "published": "2025-06-15",
+    "published_note": "Date de la dernière donnée citée dans le billet ; date exacte de publication du billet à confirmer lors de la capture.",
+    "admiralty": "B1",
+    "admiralty_justification": "Éditeur de sécurité reconnu, publication technique sourcée (B) ; faits corroborés par la presse marocaine et un CERT européen (TelQuel, Hespress, INCIBE-CERT) (1).",
+    "tlp": "TLP:CLEAR",
+    "origin": "OSINT - source publique ; contenu dark web/Telegram obtenu de façon secondaire (aucune collecte directe)",
+    "capture": "A FAIRE par l'équipe : capture d'écran + archive de la page + empreinte SHA-256 (voir docs/protocole_capture.md)",
+    "subject": "la fuite CNSS et les institutions marocaines citées (dont des banques)"
+  },
+  {
+    "id": "INTEL-002",
+    "title": "SIM swap : +327 % au Kenya en 2025, 123 000+ SIM frauduleuses",
+    "text": "Selon l'African Cyberthreat Assessment Report 2026 d'INTERPOL, la fraude par SIM swap a augmenté de 327 % au Kenya en 2025, avec plus de 123 000 cartes SIM frauduleuses émises et environ 3,8 millions USD vidés de portefeuilles mobile money. La fraude mobile money est signalée par 97 % des pays répondants. Les opérateurs exigent souvent une ordonnance judiciaire avant de partager les journaux de SIM swap, ce qui prend plusieurs semaines.",
+    "source": "INTERPOL, African Cyberthreat Assessment Report 2026 (p. 13, 19, 23, 28)",
+    "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+    "published": "2026-08-03",
+    "admiralty": "A2",
+    "admiralty_justification": "Organisation internationale de référence, rapport officiel (A) ; chiffres cohérents avec d'autres sources mais non reconfirmés indépendamment (2).",
+    "tlp": "TLP:CLEAR",
+    "origin": "CTI institutionnelle - rapport public",
+    "capture": "A FAIRE par l'équipe",
+    "subject": "les campagnes de SIM swap décrites dans le rapport INTERPOL 2026"
+  },
+  {
+    "id": "INTEL-003",
+    "title": "Contenus d'origine africaine sur les forums du dark web : +62 % sur un an",
+    "text": "D'après les données de l'éditeur S2W citées par INTERPOL, les contenus d'origine africaine sur les forums du dark web ont augmenté de 62 % sur un an. Ils comprennent surtout des documents d'identité, des PIN de cartes SIM, des identifiants bancaires et des données de mobile money. INTERPOL note aussi que des identités synthétiques générées par IA servent à ouvrir des comptes bancaires et à enregistrer des cartes SIM.",
+    "source": "INTERPOL, African Cyberthreat Assessment Report 2026 (p. 23), données S2W",
+    "url": "https://www.interpol.int/fr/content/download/24663/file/INTERPOL%20AFRICAN%20CYBERTHREAT%20ASSESSMENT%20REPORT%202026%20%281%29.pdf",
+    "published": "2026-08-03",
+    "admiralty": "B2",
+    "admiralty_justification": "Donnée d'un éditeur (S2W) relayée par INTERPOL : fiabilité B ; plausible et cohérente avec d'autres observations mais non vérifiée directement (2).",
+    "tlp": "TLP:CLEAR",
+    "origin": "Dark web - information secondaire via rapport public (aucune collecte directe)",
+    "capture": "A FAIRE par l'équipe",
+    "subject": "les identifiants bancaires, PIN SIM et données mobile money vendus sur les forums"
+  }
+]

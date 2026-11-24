@@ -1,0 +1,44 @@
+{
+  "type": "bundle",
+  "id": "bundle--232b5f0f-c0b4-5e7b-9d70-c63cf3de6f7c",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "name": "Projet 3pH Threat Hunting Afrique (HESTIM)",
+      "identity_class": "organization",
+      "id": "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e",
+      "created": "2026-08-03T00:00:00.000Z",
+      "modified": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--38aa0ecc-0093-53c7-a917-9bcedca9eb8b",
+      "created": "2026-08-03T00:00:00.000Z",
+      "modified": "2026-08-03T00:00:00.000Z",
+      "created_by_ref": "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e",
+      "name": "Contenus d'origine africaine sur les forums du dark web : +62 % sur un an",
+      "description": "D'après les données de l'éditeur S2W citées par INTERPOL, les contenus d'origine africaine sur les forums du dark web ont augmenté de 62 % sur un an. Ils comprennent surtout des documents d'identité, des PIN de cartes SIM, des identifiants bancaires et des données de mobile money. INTERPOL note aussi que des identités synthétiques générées par IA servent à ouvrir des comptes bancaires et à enregistrer des cartes SIM.\n[score=55.3 action=chasse P=0.432 F=0.8 C=0.652]\n[hypothèse H-INTEL-003-harmattan-telecom-ci: T1566, T1078, T1110]",
+      "published": "2026-08-03T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e"
+      ],
+      "labels": [
+        "tlp:clear",
+        "admiralty-scale:source-reliability=\"b\"",
+        "admiralty-scale:information-credibility=\"2\""
+      ],
+      "external_references": [
+        {
+          "source_name": "INTERPOL, African Cyberthreat Assessment Report 2026 (p. 23), données S2W",
+          "url": "https://www.interpol.int/fr/content/download/24663/file/INTERPOL%20AFRICAN%20CYBERTHREAT%20ASSESSMENT%20REPORT%202026%20%281%29.pdf",
+          "description": "Cotation B2"
+        }
+      ]
+    }
+  ]
+}

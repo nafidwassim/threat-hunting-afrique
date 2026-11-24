@@ -1,0 +1,41 @@
+# Socle commun du modèle : identifiants exposés, phishing, rançongiciels, surface d'attaque.
+# Applicable à toute entreprise, quel que soit le secteur ou le pays (exigence 3.3 du descriptif).
+# Poids (weight) : importance relative de la technique pour une entreprise "moyenne" africaine, 0..1.
+# Les sources justifient le poids ; elles sont citées dans le rapport (bibliographie IEEE).
+version: "0.1"
+ttps:
+  - {id: T1566, name: "Phishing", tactic: initial-access, weight: 0.75,
+     why: "Le phishing représente 34 % des incidents détectés en Afrique (INTERPOL 2025, p. 11-13)."}
+  - {id: T1078, name: "Valid Accounts", tactic: initial-access, weight: 0.70,
+     why: "Identifiants volés/vendus : vecteur d'accès dominant derrière fuites et fraudes."}
+  - {id: T1110, name: "Brute Force", tactic: credential-access, weight: 0.55,
+     why: "Password spraying / credential stuffing sur VPN, webmail et services exposés."}
+  - {id: T1190, name: "Exploit Public-Facing Application", tactic: initial-access, weight: 0.65,
+     why: "Vulnérabilités sur équipements exposés ; Ethiopie 5e du continent pour les détections de vulnérabilités (INTERPOL 2026, p. 13)."}
+  - {id: T1133, name: "External Remote Services", tactic: initial-access, weight: 0.55,
+     why: "VPN / RDP / Citrix exposés, souvent combinés à des identifiants valides."}
+  - {id: T1486, name: "Data Encrypted for Impact", tactic: impact, weight: 0.70,
+     why: "Rançongiciels : 28 % des vecteurs d'attaque cités (Mastercard, INTERPOL 2026, p. 19)."}
+  - {id: T1589, name: "Gather Victim Identity Information", tactic: reconnaissance, weight: 0.50,
+     why: "Identifiants et données d'employés exposés, point de départ du spear-phishing."}
+  - {id: T1583, name: "Acquire Infrastructure", tactic: resource-development, weight: 0.40,
+     why: "Domaines typosquattés (T1583.001) utilisés pour le phishing de marque."}
+  - {id: T1567, name: "Exfiltration Over Web Service", tactic: exfiltration, weight: 0.40,
+     why: "Exfiltration vers cloud / messageries avant chiffrement ou revente."}
+  - {id: T1650, name: "Acquire Access", tactic: resource-development, weight: 0.45,
+     why: "Courtiers d'accès initiaux : revente d'accès VPN/RDP sur forums (observation passive)."}
+keywords:
+  - ransomware
+  - rançongiciel
+  - phishing
+  - hameçonnage
+  - "fuite de données"
+  - "data leak"
+  - credentials
+  - identifiants
+  - "initial access"
+  - "access broker"
+  - vpn
+  - rdp
+  - "business email compromise"
+  - typosquatting

@@ -1,0 +1,14 @@
+country: CI
+names: ["Côte d'Ivoire", "Cote d'Ivoire", "Ivory Coast", Ivoirien, Abidjan, Yamoussoukro]
+cctld: [".ci"]
+language: [fr]
+authorities: [ARTCI, CI-CERT, PLCC, DITT]
+legal_framework:
+  - "Loi n° 2013-451 du 19 juin 2013 relative à la lutte contre la cybercriminalité"
+  - "Loi n° 2013-450 relative à la protection des données à caractère personnel (ARTCI)"
+  - "Loi n° 2019-574 portant Code pénal (art. 365 à 377, infractions TIC)"
+threat_context:
+  - text: "La Côte d'Ivoire figure parmi les 11 pays africains à l'origine de la majorité des activités BEC du continent (Nigeria, Ghana, Côte d'Ivoire, Afrique du Sud)."
+    source: "INTERPOL, Africa Cyberthreat Assessment Report 2025, p. 17"
+    tendency: "BEC et fraudes financières ; mobile money très répandu en Afrique de l'Ouest"
+keywords: ["Côte d'Ivoire", "Cote d'Ivoire", "Ivory Coast", ".ci", ARTCI, CI-CERT, Abidjan, FCFA, XOF, "Afrique de l'Ouest", "West Africa", UEMOA]

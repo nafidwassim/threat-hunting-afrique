@@ -1,0 +1,67 @@
+# Module sectoriel : télécommunications / mobile money
+sector: telecom
+aliases: [telecom, télécom, telecoms, télécommunications, operateur, opérateur, "mobile money"]
+ttps:
+  - {id: T1656, name: "Impersonation", tactic: defense-evasion, weight: 0.90,
+     why: "SIM swap par ingénierie sociale : +327 % au Kenya, 123 000+ SIM frauduleuses (INTERPOL 2026, p. 13, 19)."}
+  - {id: T1657, name: "Financial Theft", tactic: impact, weight: 0.90,
+     why: "Fraude mobile money signalée par 97 % des pays répondants (INTERPOL 2026, p. 19)."}
+  - {id: T1199, name: "Trusted Relationship", tactic: initial-access, weight: 0.50,
+     why: "Agents, distributeurs et intégrateurs disposant d'accès aux outils d'activation SIM."}
+  - {id: T1499, name: "Endpoint Denial of Service", tactic: impact, weight: 0.55,
+     why: "46 786 attaques DDoS au Kenya au premier semestre 2025, surtout contre les télécoms (INTERPOL 2026, p. 13)."}
+  - {id: T1530, name: "Data from Cloud Storage", tactic: collection, weight: 0.50,
+     why: "Bases d'abonnés (KYC) exposées dans le cloud ; base clients d'un télécom namibien compromise (INTERPOL 2026, p. 15)."}
+  - {id: T1505.003, name: "Web Shell", tactic: persistence, weight: 0.50,
+     why: "Persistance sur portails exposés (OSS/BSS, portails revendeurs)."}
+  - {id: T1048, name: "Exfiltration Over Alternative Protocol", tactic: exfiltration, weight: 0.45,
+     why: "Exfiltration de bases d'abonnés avant extorsion."}
+actors:
+  - {name: "Hunters International (télécoms, gouvernement, finance)", type: rançongiciel,
+     source: "INTERPOL, 2025, p. 17 : attaque de Telecom Namibia en décembre 2024"}
+  - {name: "Acteur lié à Akira (Paratus Telecom)", type: rançongiciel, source: "INTERPOL, 2026, p. 15"}
+  - {name: "Fraudeurs SIM swap et réseaux de mules mobile money", type: fraude, source: "INTERPOL, 2026, p. 19"}
+keywords:
+  - "sim swap"
+  - "échange de sim"
+  - "mobile money"
+  - ussd
+  - msisdn
+  - imsi
+  - otp
+  - kyc
+  - abonnés
+  - subscriber
+  - "porting"
+  - "opérateur mobile"
+  - telecom
+  - "mobile operator"
+  - "operator"
+  - opérateur
+  - "sim card"
+hypotheses:
+  - id: HT-01
+    title: "Abus des outils d'activation SIM par comptes d'agents (SIM swap interne)"
+    techniques: [T1656, T1078]
+    data_sources: ["wazuh: journaux applicatifs du portail agents", "volumétrie par agent / par heure"]
+    statement: "Des comptes d'agents de {brands} réalisent des échanges de SIM hors profil habituel."
+  - id: HT-02
+    title: "Exploitation de portails ou API exposés (OSS/BSS, revendeurs)"
+    techniques: [T1190, T1505.003]
+    data_sources: ["wazuh: journaux web / WAF", "InternetDB: ports et CVE exposés"]
+    statement: "Des services exposés de {domains} sont scannés puis exploités."
+  - id: HT-03
+    title: "Exfiltration de la base d'abonnés avant extorsion"
+    techniques: [T1530, T1567, T1048]
+    data_sources: ["wazuh: flux sortants volumineux", "alertes DLP"]
+    statement: "Des volumes de données anormaux sortent des serveurs hébergeant les abonnés."
+  - id: HT-04
+    title: "DDoS contre l'infrastructure d'accès ou de signalisation"
+    techniques: [T1498, T1499]
+    data_sources: ["wazuh: journaux pare-feu / équilibreurs"]
+    statement: "Pics de requêtes anormaux visant les portails clients de {brands}."
+  - id: HT-05
+    title: "Phishing SMS / ingénierie sociale pour captation d'OTP mobile money"
+    techniques: [T1598, T1566]
+    data_sources: ["renseignement externe (OSINT)", "signalements clients"]
+    statement: "Des campagnes SMS imitant {brands} circulent et captent les codes OTP."

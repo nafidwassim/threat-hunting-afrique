@@ -1,0 +1,23 @@
+# Registre des sources. Une source non "validated" ne peut pas être collectée (garde-fou dans thab/sources.py).
+# validation_status : proposed -> validated_by_supervisor (date) ; la validation est donnée par l'encadrant.
+sources:
+  - {id: SRC-001, name: "crt.sh (Certificate Transparency)", type: osint_surface, access: clearnet, collect: passive,
+     url: "https://crt.sh", reliability: B, validation_status: proposed, legal_note: "Données publiques, requêtes sur domaines des profils fictifs uniquement"}
+  - {id: SRC-002, name: "Shodan InternetDB", type: osint_surface, access: clearnet, collect: passive,
+     url: "https://internetdb.shodan.io", reliability: B, validation_status: proposed, legal_note: "API gratuite sans clé, IP du laboratoire uniquement"}
+  - {id: SRC-003, name: "dnstwist (permutations de domaines)", type: osint_surface, access: local, collect: passive,
+     url: "https://github.com/elceef/dnstwist", reliability: B, validation_status: proposed, legal_note: "Génération locale ; résolution DNS limitée aux domaines de test"}
+  - {id: SRC-004, name: "INTERPOL - African Cyberthreat Assessment Report", type: cti_institutional, access: clearnet, collect: passive,
+     url: "https://www.interpol.int", reliability: A, validation_status: proposed, legal_note: "Rapport public, citation"}
+  - {id: SRC-005, name: "CybelAngel - blog/flash reports", type: cti_vendor, access: clearnet, collect: passive,
+     url: "https://cybelangel.com", reliability: B, validation_status: proposed, legal_note: "Publication publique d'un éditeur"}
+  - {id: SRC-006, name: "CERT/CSIRT nationaux (maCERT, CI-CERT, KE-CIRT/CC)", type: cti_institutional, access: clearnet, collect: passive,
+     url: "", reliability: A, validation_status: proposed, legal_note: "Bulletins publics"}
+  - {id: SRC-007, name: "Flux CTI ouverts (CISA KEV, abuse.ch URLhaus/ThreatFox, CERT-EU)", type: cti_open, access: clearnet, collect: passive,
+     url: "", reliability: B, validation_status: proposed, legal_note: "Flux publics sans abonnement"}
+  - {id: SRC-008, name: "Canaux Telegram publics (liste à fixer)", type: telegram_public, access: clearnet, collect: passive,
+     url: "", reliability: F, validation_status: proposed, channels: [],
+     legal_note: "Aucun canal collecté tant que la liste n'est pas validée par l'encadrant ; aucun compte, aucune interaction"}
+  - {id: SRC-009, name: "Ahmia (index public de services .onion)", type: darkweb_index, access: clearnet, collect: passive,
+     url: "https://ahmia.fi", reliability: F, validation_status: proposed,
+     legal_note: "Consultation des métadonnées uniquement ; accès .onion exclusivement depuis la VM Whonix, après validation préalable de l'encadrant"}

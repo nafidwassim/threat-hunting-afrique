@@ -1,0 +1,44 @@
+{
+  "type": "bundle",
+  "id": "bundle--bf9d9b6a-a2a5-521b-8952-27420f0fa101",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "name": "Projet 3pH Threat Hunting Afrique (HESTIM)",
+      "identity_class": "organization",
+      "id": "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e",
+      "created": "2026-08-03T00:00:00.000Z",
+      "modified": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c1682e9d-1377-5e8f-91e3-077c16b5abe1",
+      "created": "2026-08-03T00:00:00.000Z",
+      "modified": "2026-08-03T00:00:00.000Z",
+      "created_by_ref": "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e",
+      "name": "SIM swap : +327 % au Kenya en 2025, 123 000+ SIM frauduleuses",
+      "description": "Selon l'African Cyberthreat Assessment Report 2026 d'INTERPOL, la fraude par SIM swap a augmenté de 327 % au Kenya en 2025, avec plus de 123 000 cartes SIM frauduleuses émises et environ 3,8 millions USD vidés de portefeuilles mobile money. La fraude mobile money est signalée par 97 % des pays répondants. Les opérateurs exigent souvent une ordonnance judiciaire avant de partager les journaux de SIM swap, ce qui prend plusieurs semaines.\n[score=59.3 action=chasse P=0.477 F=0.9 C=0.652]\n[hypothèse H-INTEL-002-harmattan-telecom-ci: T1656, T1657, T1078]",
+      "published": "2026-08-03T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e"
+      ],
+      "labels": [
+        "tlp:clear",
+        "admiralty-scale:source-reliability=\"a\"",
+        "admiralty-scale:information-credibility=\"2\""
+      ],
+      "external_references": [
+        {
+          "source_name": "INTERPOL, African Cyberthreat Assessment Report 2026 (p. 13, 19, 23, 28)",
+          "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+          "description": "Cotation A2"
+        }
+      ]
+    }
+  ]
+}

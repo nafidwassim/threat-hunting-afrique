@@ -1,0 +1,44 @@
+{
+  "type": "bundle",
+  "id": "bundle--86dd48d6-6518-53e1-be47-948c844e1e04",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "name": "Projet 3pH Threat Hunting Afrique (HESTIM)",
+      "identity_class": "organization",
+      "id": "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e",
+      "created": "2025-06-15T00:00:00.000Z",
+      "modified": "2025-06-15T00:00:00.000Z"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--1e50ff92-8fc4-50cd-90e4-6abf5fa10053",
+      "created": "2025-06-15T00:00:00.000Z",
+      "modified": "2025-06-15T00:00:00.000Z",
+      "created_by_ref": "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e",
+      "name": "Fuite CNSS (Maroc) revendiquée sur Telegram puis republiée sur des forums",
+      "description": "Un utilisateur Telegram (alias Jabaroot) a revendiqué le 8 avril 2025 la fuite de données de la Caisse nationale de sécurité sociale du Maroc : plus de 50 000 fichiers PDF et plus d'un million de lignes dans deux fichiers CSV, avec des données financières et personnelles d'entreprises et de salariés marocains, dont de grandes banques. Les données ont été publiées sur BreachForums puis DarkForums ; plus de 5 To de données ont été publiées sur des plateformes web et dark web entre avril et juin 2025. Les revendications visant des actifs marocains sont passées de 63 à 88 en environ deux mois et demi (finance, gouvernement, éducation).\n[score=51.2 action=chasse P=0.361 F=0.9 C=0.595]\n[hypothèse H-INTEL-001-zellige-bank-ma: T1078, T1566, T1110]",
+      "published": "2025-06-15T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "object_refs": [
+        "identity--fe7cf54c-82cd-53d6-bc28-acfe5dacef6e"
+      ],
+      "labels": [
+        "tlp:clear",
+        "admiralty-scale:source-reliability=\"b\"",
+        "admiralty-scale:information-credibility=\"1\""
+      ],
+      "external_references": [
+        {
+          "source_name": "CybelAngel, Escalating Cyber Hostilities in North Africa [A CNSS Breach Update]",
+          "url": "https://cybelangel.com/blog/a-cnss-breach-update/",
+          "description": "Cotation B1"
+        }
+      ]
+    }
+  ]
+}

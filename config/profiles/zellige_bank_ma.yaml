@@ -1,0 +1,21 @@
+# Entreprise FICTIVE n°1 - aucune donnée réelle. Domaines en .example (RFC 2606) : jamais résolus sur Internet.
+id: zellige-bank-ma
+name: "Zellige Bank"
+fictional: true
+sector: banque
+country: MA
+size: "grande banque de détail, 4 500 employés, 220 agences"
+assets:
+  domains: [zellige-bank.example, zelligepay.example]
+  brands: ["Zellige Bank", "ZelligePay", "Zellige Mobile"]
+  public_services: ["e-banking web", "application mobile", "API open banking", "portail RH", "webmail"]
+  critical_systems: ["core banking", "SWIFT", "monétique", "Active Directory"]
+technologies: ["Fortinet", "Microsoft 365", "Active Directory", "VMware", "Oracle", "SWIFT", "Citrix"]
+suppliers: ["intégrateur core banking", "prestataire monétique", "opérateur télécom principal"]
+simulation:            # utilisé par les générateurs de logs (generators/)
+  timezone_offset: "+01:00"
+  employees: 40
+  work_hours: [8, 18]
+  hosts: [zb-ad01, zb-vpn01, zb-web01, zb-app01, zb-fs01]
+  internal_net: "10.20.0.0/16"
+  usual_countries: [MA, FR]

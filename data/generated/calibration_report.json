@@ -1,0 +1,156 @@
+{
+  "cross_profile": {
+    "calibré sur zellige -> testé sur harmattan": {
+      "seuils": {
+        "chasse": 48,
+        "surveillance": 38
+      },
+      "train": {
+        "chasse": {
+          "precision": 0.929,
+          "recall": 0.867,
+          "f1": 0.897,
+          "support": 15
+        },
+        "surveillance": {
+          "precision": 0.4,
+          "recall": 0.462,
+          "f1": 0.429,
+          "support": 13
+        },
+        "archivage": {
+          "precision": 0.829,
+          "recall": 0.81,
+          "f1": 0.819,
+          "support": 42
+        },
+        "macro_f1": 0.715,
+        "accuracy": 0.757
+      },
+      "test": {
+        "chasse": {
+          "precision": 0.765,
+          "recall": 0.867,
+          "f1": 0.812,
+          "support": 15
+        },
+        "surveillance": {
+          "precision": 0.412,
+          "recall": 0.467,
+          "f1": 0.437,
+          "support": 15
+        },
+        "archivage": {
+          "precision": 0.861,
+          "recall": 0.775,
+          "f1": 0.816,
+          "support": 40
+        },
+        "macro_f1": 0.688,
+        "accuracy": 0.729
+      }
+    },
+    "calibré sur harmattan -> testé sur zellige": {
+      "seuils": {
+        "chasse": 52,
+        "surveillance": 36
+      },
+      "train": {
+        "chasse": {
+          "precision": 0.867,
+          "recall": 0.867,
+          "f1": 0.867,
+          "support": 15
+        },
+        "surveillance": {
+          "precision": 0.5,
+          "recall": 0.733,
+          "f1": 0.595,
+          "support": 15
+        },
+        "archivage": {
+          "precision": 0.909,
+          "recall": 0.75,
+          "f1": 0.822,
+          "support": 40
+        },
+        "macro_f1": 0.761,
+        "accuracy": 0.771
+      },
+      "test": {
+        "chasse": {
+          "precision": 0.909,
+          "recall": 0.667,
+          "f1": 0.769,
+          "support": 15
+        },
+        "surveillance": {
+          "precision": 0.231,
+          "recall": 0.462,
+          "f1": 0.308,
+          "support": 13
+        },
+        "archivage": {
+          "precision": 0.818,
+          "recall": 0.643,
+          "f1": 0.72,
+          "support": 42
+        },
+        "macro_f1": 0.599,
+        "accuracy": 0.614
+      }
+    }
+  },
+  "seuils_retenus_tous_profils": {
+    "chasse": 50,
+    "surveillance": 38,
+    "metrics": {
+      "chasse": {
+        "precision": 0.862,
+        "recall": 0.833,
+        "f1": 0.847,
+        "support": 30
+      },
+      "surveillance": {
+        "precision": 0.412,
+        "recall": 0.5,
+        "f1": 0.452,
+        "support": 28
+      },
+      "archivage": {
+        "precision": 0.844,
+        "recall": 0.793,
+        "f1": 0.818,
+        "support": 82
+      },
+      "macro_f1": 0.706,
+      "accuracy": 0.743
+    }
+  },
+  "seuils_config_actuels": {
+    "hunt": 50,
+    "watch": 38,
+    "metrics": {
+      "chasse": {
+        "precision": 0.862,
+        "recall": 0.833,
+        "f1": 0.847,
+        "support": 30
+      },
+      "surveillance": {
+        "precision": 0.412,
+        "recall": 0.5,
+        "f1": 0.452,
+        "support": 28
+      },
+      "archivage": {
+        "precision": 0.844,
+        "recall": 0.793,
+        "f1": 0.818,
+        "support": 82
+      },
+      "macro_f1": 0.706,
+      "accuracy": 0.743
+    }
+  }
+}

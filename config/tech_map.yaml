@@ -1,0 +1,18 @@
+# Correspondance technologie du profil -> techniques ATT&CK à prioriser (+boost sur le poids).
+# Mécanisme clé de la généricité : un secteur inconnu est tout de même adapté via ses technologies.
+fortinet:        {boost: 0.20, ttps: [T1190, T1133],  note: "VPN SSL / pare-feu exposés"}
+"palo alto":     {boost: 0.15, ttps: [T1190, T1133],  note: "Passerelle VPN exposée"}
+citrix:          {boost: 0.20, ttps: [T1190, T1133],  note: "Gateway / ADC exposés"}
+exchange:        {boost: 0.20, ttps: [T1190, T1566],  note: "Messagerie on-premise"}
+"microsoft 365": {boost: 0.15, ttps: [T1566, T1078],  note: "Comptes cloud, phishing d'identifiants"}
+"active directory": {boost: 0.15, ttps: [T1003, T1078, T1021.001], note: "Cible centrale des rançongiciels"}
+rdp:             {boost: 0.15, ttps: [T1133, T1021.001], note: "Accès distant"}
+vmware:          {boost: 0.15, ttps: [T1486, T1490],  note: "Hyperviseurs ESXi visés par rançongiciels"}
+oracle:          {boost: 0.05, ttps: [T1190],         note: "Bases applicatives"}
+swift:           {boost: 0.20, ttps: [T1657, T1565.001], note: "Messagerie interbancaire"}
+ussd:            {boost: 0.15, ttps: [T1656, T1657],  note: "Passerelle USSD / mobile money"}
+"mobile money":  {boost: 0.20, ttps: [T1657, T1656],  note: "Plateforme de portefeuille mobile"}
+wordpress:       {boost: 0.10, ttps: [T1190, T1505.003], note: "CMS exposé"}
+dhis2:           {boost: 0.10, ttps: [T1190, T1078],  note: "Plateforme de santé publique"}
+scada:           {boost: 0.20, ttps: [T1190, T1133],  note: "Systèmes industriels exposés"}
+linux:           {boost: 0.05, ttps: [T1110, T1021.004], note: "Accès SSH exposé"}

@@ -1,0 +1,15 @@
+<!--
+  HB-03 - Compte présent dans la liste d'identifiants exposés (fuite SIMULÉE) qui se connecte avec succès.
+  1) Copier data/generated/<profil>/leaked_accounts.cdb dans /var/ossec/etc/lists/leaked_accounts
+  2) Déclarer <list>etc/lists/leaked_accounts</list> dans <ruleset> de ossec.conf, puis recompiler la liste (ossec-makelists / redémarrage du manager).
+  3) Tester avec /var/ossec/bin/wazuh-logtest AVANT mise en production.
+  STATUT : brouillon rédigé hors laboratoire, NON testé (aucun manager Wazuh dans l'environnement de rédaction).
+-->
+<group name="local,threat_hunting,hb03,">
+  <rule id="100300" level="10">
+    <if_sid>5715</if_sid>   <!-- sshd : authentification réussie -->
+    <list field="dstuser" lookup="match_key">etc/lists/leaked_accounts</list>
+    <description>HB-03 : connexion réussie d'un compte présent dans une fuite d'identifiants (liste MISP/CDB)</description>
+    <mitre><id>T1078</id></mitre>
+  </rule>
+</group>

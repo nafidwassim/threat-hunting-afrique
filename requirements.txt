@@ -1,0 +1,6 @@
+pyyaml
+scikit-learn
+numpy
+requests
+pytest
+# laboratoire : sentence-transformers, pymisp, stix2-validator, dnstwist

@@ -1,0 +1,328 @@
+[
+  {
+    "id": "INTEL-001",
+    "title": "Fuite CNSS (Maroc) revendiquée sur Telegram puis republiée sur des forums",
+    "source": "CybelAngel, Escalating Cyber Hostilities in North Africa [A CNSS Breach Update]",
+    "url": "https://cybelangel.com/blog/a-cnss-breach-update/",
+    "published": "2025-06-15",
+    "cotation": "B1",
+    "cotation_label": "B1 - source : habituellement fiable ; information : confirmée par d'autres sources",
+    "tlp": "TLP:CLEAR",
+    "category_predicted": "data_leak_sale",
+    "iocs": {},
+    "profiles": {
+      "zellige_bank_ma": {
+        "score": 51.2,
+        "action": "chasse",
+        "P": 0.361,
+        "F": 0.9,
+        "C": 0.595,
+        "hits": [
+          "secteur+pays"
+        ],
+        "hypothesis": {
+          "hypothesis_id": "H-INTEL-001-zellige-bank-ma",
+          "item_id": "INTEL-001",
+          "statement": "Des identifiants ou documents liés à la fuite CNSS et les institutions marocaines citées (dont des banques) circulent ; ils pourraient être réutilisés (credential stuffing, phishing ciblé) contre Zellige Bank / ZelligePay / Zellige Mobile.",
+          "techniques": [
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "initial-access",
+              "weight": 1.0
+            },
+            {
+              "id": "T1566",
+              "name": "Phishing",
+              "tactic": "initial-access",
+              "weight": 0.9
+            },
+            {
+              "id": "T1110",
+              "name": "Brute Force",
+              "tactic": "credential-access",
+              "weight": 0.55
+            }
+          ],
+          "wazuh_queries": {
+            "T1078": "rule.groups:authentication_success AND NOT data.srcgeo.country_name:(<pays habituels du profil>) OR hour_of_day:[22 TO 5]",
+            "T1566": "rule.groups:web AND data.url:(*<domaine typosquatté>*)",
+            "T1110": "rule.groups:authentication_failed AND data.srcip:* | agg: cardinality(data.dstuser) by data.srcip, 10m >= 8"
+          },
+          "queries_status": "pseudo-requêtes (logique de chasse) à traduire et valider au laboratoire ; versions exécutables : hunts/wazuh/",
+          "generated_by": "rules",
+          "status": "candidate",
+          "date": "2026-11-08"
+        },
+        "stix_errors": []
+      },
+      "harmattan_telecom_ci": {
+        "score": 33.4,
+        "action": "archivage",
+        "P": 0.037,
+        "F": 0.9,
+        "C": 0.595,
+        "hits": []
+      },
+      "test_inedit_sante_ke": {
+        "score": 33.9,
+        "action": "archivage",
+        "P": 0.047,
+        "F": 0.9,
+        "C": 0.595,
+        "hits": []
+      }
+    }
+  },
+  {
+    "id": "INTEL-002",
+    "title": "SIM swap : +327 % au Kenya en 2025, 123 000+ SIM frauduleuses",
+    "source": "INTERPOL, African Cyberthreat Assessment Report 2026 (p. 13, 19, 23, 28)",
+    "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+    "published": "2026-08-03",
+    "cotation": "A2",
+    "cotation_label": "A2 - source : totalement fiable ; information : probablement vraie",
+    "tlp": "TLP:CLEAR",
+    "category_predicted": "mobile_money_fraud",
+    "iocs": {},
+    "profiles": {
+      "zellige_bank_ma": {
+        "score": 37.1,
+        "action": "archivage",
+        "P": 0.073,
+        "F": 0.9,
+        "C": 0.652,
+        "hits": [
+          "région Afrique"
+        ]
+      },
+      "harmattan_telecom_ci": {
+        "score": 59.3,
+        "action": "chasse",
+        "P": 0.477,
+        "F": 0.9,
+        "C": 0.652,
+        "hits": [
+          "techno:Mobile money",
+          "secteur"
+        ],
+        "hypothesis": {
+          "hypothesis_id": "H-INTEL-002-harmattan-telecom-ci",
+          "item_id": "INTEL-002",
+          "statement": "Une fraude mobile money / SIM swap décrite pourrait être reproduite contre Harmattan Télécom / HarmattanPay / Harmattan Money.",
+          "techniques": [
+            {
+              "id": "T1656",
+              "name": "Impersonation",
+              "tactic": "defense-evasion",
+              "weight": 1.0
+            },
+            {
+              "id": "T1657",
+              "name": "Financial Theft",
+              "tactic": "impact",
+              "weight": 1.0
+            },
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "initial-access",
+              "weight": 0.7
+            }
+          ],
+          "wazuh_queries": {
+            "T1656": "data.app.action:\"sim_swap\" | agg: count by data.app.agent_id, 1h >= 5",
+            "T1657": "data.app.action:(\"beneficiary_change\" OR \"transfer\") | séquence: changement bénéficiaire puis virement > seuil en 24h",
+            "T1078": "rule.groups:authentication_success AND NOT data.srcgeo.country_name:(<pays habituels du profil>) OR hour_of_day:[22 TO 5]"
+          },
+          "queries_status": "pseudo-requêtes (logique de chasse) à traduire et valider au laboratoire ; versions exécutables : hunts/wazuh/",
+          "generated_by": "rules",
+          "status": "candidate",
+          "date": "2026-11-08"
+        },
+        "stix_errors": []
+      },
+      "test_inedit_sante_ke": {
+        "score": 44.4,
+        "action": "surveillance",
+        "P": 0.206,
+        "F": 0.9,
+        "C": 0.652,
+        "hits": [
+          "pays"
+        ],
+        "hypothesis": {
+          "hypothesis_id": "H-INTEL-002-savannah-health-ke",
+          "item_id": "INTEL-002",
+          "statement": "Une fraude mobile money / SIM swap décrite pourrait être reproduite contre Savannah Health / SavannahCare.",
+          "techniques": [
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "initial-access",
+              "weight": 0.95
+            }
+          ],
+          "wazuh_queries": {
+            "T1078": "rule.groups:authentication_success AND NOT data.srcgeo.country_name:(<pays habituels du profil>) OR hour_of_day:[22 TO 5]"
+          },
+          "queries_status": "pseudo-requêtes (logique de chasse) à traduire et valider au laboratoire ; versions exécutables : hunts/wazuh/",
+          "generated_by": "rules",
+          "status": "candidate",
+          "date": "2026-11-08"
+        },
+        "stix_errors": []
+      }
+    }
+  },
+  {
+    "id": "INTEL-003",
+    "title": "Contenus d'origine africaine sur les forums du dark web : +62 % sur un an",
+    "source": "INTERPOL, African Cyberthreat Assessment Report 2026 (p. 23), données S2W",
+    "url": "https://www.interpol.int/fr/content/download/24663/file/INTERPOL%20AFRICAN%20CYBERTHREAT%20ASSESSMENT%20REPORT%202026%20%281%29.pdf",
+    "published": "2026-08-03",
+    "cotation": "B2",
+    "cotation_label": "B2 - source : habituellement fiable ; information : probablement vraie",
+    "tlp": "TLP:CLEAR",
+    "category_predicted": "data_leak_sale",
+    "iocs": {},
+    "profiles": {
+      "zellige_bank_ma": {
+        "score": 43.4,
+        "action": "surveillance",
+        "P": 0.216,
+        "F": 0.8,
+        "C": 0.652,
+        "hits": [
+          "secteur"
+        ],
+        "hypothesis": {
+          "hypothesis_id": "H-INTEL-003-zellige-bank-ma",
+          "item_id": "INTEL-003",
+          "statement": "Des identifiants ou documents liés à les identifiants bancaires, PIN SIM et données mobile money vendus sur les forums circulent ; ils pourraient être réutilisés (credential stuffing, phishing ciblé) contre Zellige Bank / ZelligePay / Zellige Mobile.",
+          "techniques": [
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "initial-access",
+              "weight": 1.0
+            },
+            {
+              "id": "T1566",
+              "name": "Phishing",
+              "tactic": "initial-access",
+              "weight": 0.9
+            },
+            {
+              "id": "T1110",
+              "name": "Brute Force",
+              "tactic": "credential-access",
+              "weight": 0.55
+            }
+          ],
+          "wazuh_queries": {
+            "T1078": "rule.groups:authentication_success AND NOT data.srcgeo.country_name:(<pays habituels du profil>) OR hour_of_day:[22 TO 5]",
+            "T1566": "rule.groups:web AND data.url:(*<domaine typosquatté>*)",
+            "T1110": "rule.groups:authentication_failed AND data.srcip:* | agg: cardinality(data.dstuser) by data.srcip, 10m >= 8"
+          },
+          "queries_status": "pseudo-requêtes (logique de chasse) à traduire et valider au laboratoire ; versions exécutables : hunts/wazuh/",
+          "generated_by": "rules",
+          "status": "candidate",
+          "date": "2026-11-08"
+        },
+        "stix_errors": []
+      },
+      "harmattan_telecom_ci": {
+        "score": 55.3,
+        "action": "chasse",
+        "P": 0.432,
+        "F": 0.8,
+        "C": 0.652,
+        "hits": [
+          "techno:Mobile money",
+          "secteur"
+        ],
+        "hypothesis": {
+          "hypothesis_id": "H-INTEL-003-harmattan-telecom-ci",
+          "item_id": "INTEL-003",
+          "statement": "Des identifiants ou documents liés à les identifiants bancaires, PIN SIM et données mobile money vendus sur les forums circulent ; ils pourraient être réutilisés (credential stuffing, phishing ciblé) contre Harmattan Télécom / HarmattanPay / Harmattan Money.",
+          "techniques": [
+            {
+              "id": "T1566",
+              "name": "Phishing",
+              "tactic": "initial-access",
+              "weight": 0.75
+            },
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "initial-access",
+              "weight": 0.7
+            },
+            {
+              "id": "T1110",
+              "name": "Brute Force",
+              "tactic": "credential-access",
+              "weight": 0.6
+            }
+          ],
+          "wazuh_queries": {
+            "T1566": "rule.groups:web AND data.url:(*<domaine typosquatté>*)",
+            "T1078": "rule.groups:authentication_success AND NOT data.srcgeo.country_name:(<pays habituels du profil>) OR hour_of_day:[22 TO 5]",
+            "T1110": "rule.groups:authentication_failed AND data.srcip:* | agg: cardinality(data.dstuser) by data.srcip, 10m >= 8"
+          },
+          "queries_status": "pseudo-requêtes (logique de chasse) à traduire et valider au laboratoire ; versions exécutables : hunts/wazuh/",
+          "generated_by": "rules",
+          "status": "candidate",
+          "date": "2026-11-08"
+        },
+        "stix_errors": []
+      },
+      "test_inedit_sante_ke": {
+        "score": 41.9,
+        "action": "surveillance",
+        "P": 0.188,
+        "F": 0.8,
+        "C": 0.652,
+        "hits": [
+          "pays"
+        ],
+        "hypothesis": {
+          "hypothesis_id": "H-INTEL-003-savannah-health-ke",
+          "item_id": "INTEL-003",
+          "statement": "Des identifiants ou documents liés à les identifiants bancaires, PIN SIM et données mobile money vendus sur les forums circulent ; ils pourraient être réutilisés (credential stuffing, phishing ciblé) contre Savannah Health / SavannahCare.",
+          "techniques": [
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "initial-access",
+              "weight": 0.95
+            },
+            {
+              "id": "T1566",
+              "name": "Phishing",
+              "tactic": "initial-access",
+              "weight": 0.9
+            },
+            {
+              "id": "T1110",
+              "name": "Brute Force",
+              "tactic": "credential-access",
+              "weight": 0.6
+            }
+          ],
+          "wazuh_queries": {
+            "T1078": "rule.groups:authentication_success AND NOT data.srcgeo.country_name:(<pays habituels du profil>) OR hour_of_day:[22 TO 5]",
+            "T1566": "rule.groups:web AND data.url:(*<domaine typosquatté>*)",
+            "T1110": "rule.groups:authentication_failed AND data.srcip:* | agg: cardinality(data.dstuser) by data.srcip, 10m >= 8"
+          },
+          "queries_status": "pseudo-requêtes (logique de chasse) à traduire et valider au laboratoire ; versions exécutables : hunts/wazuh/",
+          "generated_by": "rules",
+          "status": "candidate",
+          "date": "2026-11-08"
+        },
+        "stix_errors": []
+      }
+    }
+  }
+]

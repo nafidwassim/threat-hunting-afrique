@@ -1,0 +1,14 @@
+country: MA
+names: [Maroc, Morocco, Marocain, Moroccan, Rabat, Casablanca, Tanger, Marrakech]
+cctld: [".ma"]
+language: [fr, ar]
+authorities: [DGSSI, maCERT, CNDP, "Bank Al-Maghrib", CNSS]
+legal_framework:
+  - "Loi 05-20 relative à la cybersécurité"
+  - "Loi 09-08 relative à la protection des données personnelles (CNDP)"
+  - "Loi 07-03 complétant le Code pénal (atteintes aux STAD)"
+threat_context:
+  - text: "Fuite de données de la CNSS revendiquée sur Telegram le 8 avril 2025 (alias Jabaroot), puis publiée sur des forums ; 5 To de données publiées entre avril et juin 2025 contre 1,61 To pour toute l'année 2024 ; revendications visant des actifs marocains passées de 63 à 88 en 2,5 mois."
+    source: "CybelAngel, Escalating Cyber Hostilities in North Africa [A CNSS Breach Update], 2025"
+    tendency: "hacktivisme à motivation politique : fuites + DDoS (finance, gouvernement, éducation)"
+keywords: [Maroc, Morocco, ".ma", DGSSI, maCERT, CNDP, CNSS, Rabat, Casablanca, dirham, MAD, Maghreb, "Afrique du Nord", "North Africa"]

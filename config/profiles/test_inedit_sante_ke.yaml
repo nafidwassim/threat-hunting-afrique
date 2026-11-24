@@ -1,0 +1,23 @@
+# PROFIL DE TEST DE GÉNÉRICITÉ (simule le profil inédit que fournira l'encadrant).
+# Secteur "santé" : AUCUN module sectoriel n'existe pour lui. Pays : Kenya.
+# Ce fichier est écrit par nous pour s'entraîner ; le vrai profil inédit sera fourni par l'encadrant.
+id: savannah-health-ke
+name: "Savannah Health Network"
+fictional: true
+sector: sante
+country: KE
+size: "réseau de 12 hôpitaux privés, 3 000 employés"
+assets:
+  domains: [savannah-health.example]
+  brands: ["Savannah Health", "SavannahCare"]
+  public_services: ["portail patient", "prise de rendez-vous", "messagerie"]
+  critical_systems: ["dossier patient", "PACS", "facturation assurance"]
+technologies: ["Microsoft 365", "VMware", "DHIS2", "Fortinet", "Linux"]
+suppliers: ["éditeur dossier patient", "assureurs partenaires"]
+simulation:
+  timezone_offset: "+03:00"
+  employees: 30
+  work_hours: [7, 19]
+  hosts: [sh-ehr01, sh-pacs01, sh-vpn01, sh-web01]
+  internal_net: "10.40.0.0/16"
+  usual_countries: [KE]

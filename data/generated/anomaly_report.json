@@ -1,0 +1,45 @@
+{
+  "note": "Logs 100 % synthétiques ; l'injection est simple, les valeurs sont un plancher de validation, pas une performance réelle.",
+  "results": [
+    {
+      "profile": "zellige_bank_ma",
+      "runs": 5,
+      "iforest": {
+        "tp": 5,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.385,
+        "recall": 1.0,
+        "f1": 0.556
+      },
+      "rule_HB-03": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "profile": "harmattan_telecom_ci",
+      "runs": 5,
+      "iforest": {
+        "tp": 5,
+        "fp": 4,
+        "fn": 0,
+        "precision": 0.556,
+        "recall": 1.0,
+        "f1": 0.714
+      },
+      "rule_HB-03": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  ]
+}

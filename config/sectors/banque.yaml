@@ -1,0 +1,68 @@
+# Module sectoriel : banque / services financiers
+sector: banque
+aliases: [banque, bank, banking, finance, "services financiers", assurance_banque]
+ttps:
+  - {id: T1657, name: "Financial Theft", tactic: impact, weight: 0.90,
+     why: "La finance est le secteur le plus ciblé par la BEC en 2024 (INTERPOL 2025, p. 17)."}
+  - {id: T1656, name: "Impersonation", tactic: defense-evasion, weight: 0.55,
+     why: "Fraude au président / faux ordres de virement ; la sophistication de la BEC a fortement augmenté, notamment via l'IA (INTERPOL 2026)."}
+  - {id: T1565.001, name: "Stored Data Manipulation", tactic: impact, weight: 0.45,
+     why: "Altération de bénéficiaires ou de lots de paiement dans les applications métier."}
+  - {id: T1498, name: "Network Denial of Service", tactic: impact, weight: 0.50,
+     why: "DDoS revendiqués par des collectifs hacktivistes régionaux (CybelAngel 2025)."}
+  - {id: T1003, name: "OS Credential Dumping", tactic: credential-access, weight: 0.45,
+     why: "Étape type des chaînes rançongiciel / accès domaine."}
+  - {id: T1021.001, name: "Remote Desktop Protocol", tactic: lateral-movement, weight: 0.40,
+     why: "Mouvement latéral vers serveurs de paiement et SWIFT."}
+  - {id: T1598, name: "Phishing for Information", tactic: reconnaissance, weight: 0.50,
+     why: "Vishing / collecte d'OTP auprès des clients."}
+actors:
+  - {name: "Collectifs hacktivistes régionaux (fuites + DDoS)", type: hacktivisme,
+     source: "CybelAngel, CNSS breach update, 2025"}
+  - {name: "Affiliés rançongiciel opportunistes (Qilin, Akira, Hunters International)", type: rançongiciel,
+     source: "INTERPOL, African Cyberthreat Assessment Report 2026 et 2025"}
+  - {name: "Réseaux BEC d'Afrique de l'Ouest (ex. Black Axe)", type: fraude,
+     source: "INTERPOL, 2025, p. 17"}
+  - {name: "Courtiers d'accès initiaux", type: accès, source: "Observation passive forums (à documenter dans le journal de collecte)"}
+keywords:
+  - swift
+  - "ordre de virement"
+  - virement
+  - "carte bancaire"
+  - carding
+  - "mobile banking"
+  - e-banking
+  - "open banking"
+  - atm
+  - banque
+  - bank
+  - "bank account"
+  - bancaire
+  - "financial institution"
+  - "établissement financier"
+hypotheses:
+  - id: HB-01
+    title: "Password spraying / credential stuffing sur e-banking, VPN et webmail"
+    techniques: [T1110.003, T1110.004]
+    data_sources: ["wazuh: authentification échouée multi-comptes depuis une même IP"]
+    statement: "Des acteurs testent des identifiants issus de fuites sur les portails de {brands}."
+  - id: HB-02
+    title: "Domaines typosquattés de la marque utilisés pour du phishing client"
+    techniques: [T1583.001, T1566.002]
+    data_sources: ["dnstwist / crt.sh", "wazuh: journaux DNS / proxy"]
+    statement: "Des domaines proches de {domains} sont enregistrés et résolus depuis le SI."
+  - id: HB-03
+    title: "Réutilisation de comptes valides issus du dark web (observation passive)"
+    techniques: [T1078]
+    data_sources: ["wazuh: connexions hors horaires / nouveaux pays", "CDB: liste d'identifiants exposés MISP"]
+    statement: "Des comptes de {brands} présents dans une fuite sont utilisés pour se connecter."
+  - id: HB-04
+    title: "Fraude au virement : modification de bénéficiaire suivie d'un gros paiement"
+    techniques: [T1656, T1657]
+    data_sources: ["wazuh: journaux applicatifs de paiement"]
+    statement: "Un changement de coordonnées bancaires est suivi d'un virement inhabituel."
+  - id: HB-05
+    title: "Précurseurs de rançongiciel (suppression des clichés, dump LSASS)"
+    techniques: [T1490, T1003.001]
+    data_sources: ["wazuh: sysmon / EventID 4688"]
+    statement: "Des commandes de suppression de sauvegardes ou d'accès LSASS précèdent un chiffrement."

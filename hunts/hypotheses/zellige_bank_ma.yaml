@@ -1,0 +1,82 @@
+profile: zellige_bank_ma
+status: candidate - à valider par un analyste
+hypotheses:
+- id: HB-01
+  title: Password spraying / credential stuffing sur e-banking, VPN et webmail
+  techniques:
+  - T1110.003
+  - T1110.004
+  data_sources:
+  - 'wazuh: authentification échouée multi-comptes depuis une même IP'
+  statement: Des acteurs testent des identifiants issus de fuites sur les portails
+    de Zellige Bank / ZelligePay / Zellige Mobile.
+  origin: module sectoriel
+  status: candidate
+- id: HB-02
+  title: Domaines typosquattés de la marque utilisés pour du phishing client
+  techniques:
+  - T1583.001
+  - T1566.002
+  data_sources:
+  - dnstwist / crt.sh
+  - 'wazuh: journaux DNS / proxy'
+  statement: Des domaines proches de zellige-bank.example / zelligepay.example sont
+    enregistrés et résolus depuis le SI.
+  origin: module sectoriel
+  status: candidate
+- id: HB-03
+  title: Réutilisation de comptes valides issus du dark web (observation passive)
+  techniques:
+  - T1078
+  data_sources:
+  - 'wazuh: connexions hors horaires / nouveaux pays'
+  - 'CDB: liste d''identifiants exposés MISP'
+  statement: Des comptes de Zellige Bank / ZelligePay / Zellige Mobile présents dans
+    une fuite sont utilisés pour se connecter.
+  origin: module sectoriel
+  status: candidate
+- id: HB-04
+  title: 'Fraude au virement : modification de bénéficiaire suivie d''un gros paiement'
+  techniques:
+  - T1656
+  - T1657
+  data_sources:
+  - 'wazuh: journaux applicatifs de paiement'
+  statement: Un changement de coordonnées bancaires est suivi d'un virement inhabituel.
+  origin: module sectoriel
+  status: candidate
+- id: HB-05
+  title: Précurseurs de rançongiciel (suppression des clichés, dump LSASS)
+  techniques:
+  - T1490
+  - T1003.001
+  data_sources:
+  - 'wazuh: sysmon / EventID 4688'
+  statement: Des commandes de suppression de sauvegardes ou d'accès LSASS précèdent
+    un chiffrement.
+  origin: module sectoriel
+  status: candidate
+- id: HX-fortinet
+  title: Exploitation ou abus d'accès distant sur Fortinet
+  techniques:
+  - T1190
+  - T1133
+  data_sources:
+  - 'wazuh: journaux de l''équipement'
+  - 'InternetDB: ports/CVE exposés'
+  statement: Fortinet (VPN SSL / pare-feu exposés) chez Zellige Bank est ciblé via
+    vulnérabilité ou identifiants valides.
+  origin: technologie du profil
+  status: candidate
+- id: HX-citrix
+  title: Exploitation ou abus d'accès distant sur Citrix
+  techniques:
+  - T1190
+  - T1133
+  data_sources:
+  - 'wazuh: journaux de l''équipement'
+  - 'InternetDB: ports/CVE exposés'
+  statement: Citrix (Gateway / ADC exposés) chez Zellige Bank est ciblé via vulnérabilité
+    ou identifiants valides.
+  origin: technologie du profil
+  status: candidate

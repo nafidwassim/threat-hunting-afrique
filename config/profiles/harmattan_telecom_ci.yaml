@@ -1,0 +1,21 @@
+# Entreprise FICTIVE n°2 - aucune donnée réelle. Domaines en .example (RFC 2606).
+id: harmattan-telecom-ci
+name: "Harmattan Télécom"
+fictional: true
+sector: telecom
+country: CI
+size: "opérateur mobile et mobile money, 2 200 employés, 6 M d'abonnés"
+assets:
+  domains: [harmattan-telecom.example, harmattanpay.example]
+  brands: ["Harmattan Télécom", "HarmattanPay", "Harmattan Money"]
+  public_services: ["portail client", "portail revendeurs", "API mobile money", "USSD", "boutique en ligne"]
+  critical_systems: ["OSS/BSS", "plateforme mobile money", "HLR/HSS", "base abonnés (KYC)"]
+technologies: ["Palo Alto", "Linux", "Oracle", "Mobile money", "USSD", "VMware", "WordPress"]
+suppliers: ["intégrateur OSS/BSS", "réseau d'agents et revendeurs", "fournisseur de SMS aggregator"]
+simulation:
+  timezone_offset: "+00:00"
+  employees: 35
+  work_hours: [7, 17]
+  hosts: [ht-oss01, ht-bss01, ht-vpn01, ht-web01, ht-agent01]
+  internal_net: "10.30.0.0/16"
+  usual_countries: [CI, FR]

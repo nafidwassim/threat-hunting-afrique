@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+*.key
+*.pem
+# données réelles ou captures : jamais versionnées (seules les données synthétiques le sont)
+data/raw/
+captures/
+*.log.gz

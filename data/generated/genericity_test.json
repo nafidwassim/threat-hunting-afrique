@@ -1,0 +1,173 @@
+{
+  "profils": {
+    "zellige_bank_ma": {
+      "sector_module": "banque",
+      "country_module": "MA",
+      "warnings": [],
+      "top10_ttps": [
+        "T1078",
+        "T1657",
+        "T1190",
+        "T1566",
+        "T1133",
+        "T1486",
+        "T1565.001",
+        "T1003",
+        "T1021.001",
+        "T1110"
+      ],
+      "top5_weights": [
+        [
+          "T1078",
+          1.0
+        ],
+        [
+          "T1657",
+          1.0
+        ],
+        [
+          "T1190",
+          0.95
+        ],
+        [
+          "T1566",
+          0.9
+        ],
+        [
+          "T1133",
+          0.85
+        ]
+      ],
+      "hypotheses": [
+        "HB-01",
+        "HB-02",
+        "HB-03",
+        "HB-04",
+        "HB-05",
+        "HX-fortinet",
+        "HX-citrix"
+      ],
+      "n_keywords": 54,
+      "context": [
+        "hacktivisme à motivation politique : fuites + DDoS (finance, gouvernement, éducation)"
+      ]
+    },
+    "harmattan_telecom_ci": {
+      "sector_module": "telecom",
+      "country_module": "CI",
+      "warnings": [],
+      "top10_ttps": [
+        "T1656",
+        "T1657",
+        "T1190",
+        "T1133",
+        "T1486",
+        "T1566",
+        "T1078",
+        "T1110",
+        "T1505.003",
+        "T1499"
+      ],
+      "top5_weights": [
+        [
+          "T1656",
+          1.0
+        ],
+        [
+          "T1657",
+          1.0
+        ],
+        [
+          "T1190",
+          0.95
+        ],
+        [
+          "T1133",
+          0.85
+        ],
+        [
+          "T1486",
+          0.85
+        ]
+      ],
+      "hypotheses": [
+        "HT-01",
+        "HT-02",
+        "HT-03",
+        "HT-04",
+        "HT-05",
+        "HX-paloalto",
+        "HX-wordpres"
+      ],
+      "n_keywords": 52,
+      "context": [
+        "BEC et fraudes financières ; mobile money très répandu en Afrique de l'Ouest"
+      ]
+    },
+    "test_inedit_sante_ke": {
+      "sector_module": "_generic",
+      "country_module": "KE",
+      "warnings": [
+        "Aucun module sectoriel pour 'sante' : repli sur le socle commun."
+      ],
+      "top10_ttps": [
+        "T1078",
+        "T1190",
+        "T1566",
+        "T1486",
+        "T1133",
+        "T1110",
+        "T1490",
+        "T1589",
+        "T1650",
+        "T1021.004"
+      ],
+      "top5_weights": [
+        [
+          "T1078",
+          0.95
+        ],
+        [
+          "T1190",
+          0.95
+        ],
+        [
+          "T1566",
+          0.9
+        ],
+        [
+          "T1486",
+          0.85
+        ],
+        [
+          "T1133",
+          0.75
+        ]
+      ],
+      "hypotheses": [
+        "HG-01",
+        "HG-02",
+        "HG-03",
+        "HX-fortinet"
+      ],
+      "n_keywords": 30,
+      "context": [
+        "fraude mobile money et DDoS ; rançongiciels visant des infrastructures"
+      ]
+    }
+  },
+  "similarite": {
+    "zellige_bank_ma vs harmattan_telecom_ci": {
+      "jaccard_top10_ttps": 0.538,
+      "jaccard_hypotheses": 0.0
+    },
+    "zellige_bank_ma vs test_inedit_sante_ke": {
+      "jaccard_top10_ttps": 0.429,
+      "jaccard_hypotheses": 0.1
+    },
+    "harmattan_telecom_ci vs test_inedit_sante_ke": {
+      "jaccard_top10_ttps": 0.429,
+      "jaccard_hypotheses": 0.0
+    }
+  }
+}
